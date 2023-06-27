@@ -1,0 +1,129 @@
+/* Styling for the wooden bookshelf */
+.bookshelf {
+  width: 400px;
+  height: 200px;
+  background-color: #8B4513; /* Brown color for the wood */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Styling for the books */
+.book {
+  width: 20px;
+  height: 60px;
+  background-color: #D2B48C; /* Beige color for the books */
+  margin: 10px;
+  position: absolute;
+  bottom: 10px;
+}
+
+/* Styling for the book names */
+.book span {
+  font-size: 10px;
+  text-align: center;
+  display: block;
+  margin-top: 5px;
+  color: #000;
+}
+
+/* Positioning the books on the bookshelf */
+.book:nth-child(1) {
+  left: 0%;
+}
+
+.book:nth-child(2) {
+  left: 10%;
+}
+
+.book:nth-child(3) {
+  left: 20%;
+}
+
+.book:nth-child(4) {
+  left: 30%;
+}
+
+.book:nth-child(5) {
+  left: 40%;
+}
+.book:nth-child(6) {
+  left: 50%;
+}
+.book:nth-child(7) {
+  left: 60%;
+}
+.book:nth-child(8) {
+  left: 70%;
+}
+.book:nth-child(9) {
+  left: 80%;
+}
+.book:nth-child(10) {
+  left: 90%;
+}
+
+/* Adding some shadow effect to the books */
+.book:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: -5px;
+  opacity: 0.7;
+}
+
+/* Adding some details to the bookshelf */
+.bookshelf:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #000;
+  top: 50%;
+}
+
+.bookshelf:after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: #000;
+  top: 0;
+  left: 50%;
+}
+/* Styling for the books */
+.book {
+  width: 20px;
+  height: 60px;
+  background-color: #D2B48C; /* Beige color for the books */
+  margin: 10px;
+  position: absolute;
+  bottom: 10px;
+  animation: bookAnimation 3s infinite alternate;
+  -webkit-writing-mode: vertical-lr; /* Text orientation */
+  justify-content: center; /* Centering the text vertically */
+  align-items: center; /* Centering the text horizontally */
+  display: flex; /* Enable flexbox layout */
+}
+
+/* Animation keyframes for the books */
+@keyframes bookAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.book.top {
+  top: 10px;
+  bottom: auto;
+}
+.book.top:nth-child(1) {
+  top: 10px;
+  bottom: auto;
+}
